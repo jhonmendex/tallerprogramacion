@@ -30,8 +30,9 @@ public class Modelo {
     public void convetirDolarAPeso() {
         resultado = cantidad * moneda;
     }
-	public void 
-
+	public void convertirEuroAPeso(){
+     resultado>=cantidad*moneda;		
+	}
     public void convertirPesoADolar() {
         resultado = cantidad / moneda;
     }

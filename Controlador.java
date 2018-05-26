@@ -50,7 +50,8 @@ public class Controlador implements ActionListener {
                     vista.lResultado.setText("Introduzca una cantidad valida...");
                 }
             }
-        } else if (vista.dolares == evento.getSource()) {
+        }
+       if (vista.dolares == evento.getSource()) {
             if (!"".equals(vista.campoTexto.getText())) {
                 try {
                     cantidad = Double.parseDouble(vista.campoTexto.getText());
@@ -63,5 +64,19 @@ public class Controlador implements ActionListener {
                 }
             }
         }
+        if (vista.euros == evento.getSource()) {
+             if (!"".equals(vista.campoTexto.getText())) {
+                 try {
+                     cantidad = Double.parseDouble(vista.campoTexto.getText());
+                     modelo.setCantidad(cantidad);
+                     modelo.setMoneda(3378.69);
+                     modelo.convertirPesoAEuro();
+                     vista.lResultado.setText(modelo.getResultado().toString());
+                 } catch (NumberFormatException e) {
+                     vista.lResultado.setText("Introduzca una cantidad valida...");
+                 }
+             }
+         }
+
     }
 }

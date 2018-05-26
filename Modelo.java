@@ -30,6 +30,7 @@ public class Modelo {
     public void convetirDolarAPeso() {
         resultado = cantidad * moneda;
     }
+	public void 
 
     public void convertirPesoADolar() {
         resultado = cantidad / moneda;

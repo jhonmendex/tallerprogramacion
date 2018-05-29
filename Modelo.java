@@ -34,4 +34,12 @@ public class Modelo {
     public void convertirPesoADolar() {
         resultado = cantidad / moneda;
     }
+    
+    public void convertirRubloAPeso() {
+        resultado = cantidad * moneda;
+    }
+    
+    public void convertirPesoARublo(){
+        resultado = cantidad / moneda;
+    }
 }

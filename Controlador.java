@@ -26,6 +26,7 @@ public class Controlador implements ActionListener {
 
         this.vista.pesos.addActionListener(this);
         this.vista.dolares.addActionListener(this);
+        this.vista.rublos.addActionListener(this);
     }
 
     public void iniciarVista() {
@@ -62,6 +63,34 @@ public class Controlador implements ActionListener {
                     vista.lResultado.setText("Introduzca una cantidad valida...");
                 }
             }
+        }else if (vista.rublos == evento.getSource()) {
+            if (!"".equals(vista.campoTexto.getText())){
+                try {
+                    cantidad = Double.parseDouble(vista.campoTexto.getText());
+                    modelo.setCantidad(cantidad);
+                     modelo.setMoneda(0.0218);
+                    modelo.convertirRubloAPeso();
+                    vista.lResultado.setText(modelo.getResultado().toString());
+                } catch (NumberFormatException e) {
+                    vista.lResultado.setText("Introduzca una cantidad valida...");
+                }
+                
+            }
+        }else if (vista.pesos == evento.getSource()) {
+            if (!"".equals(vista.campoTexto.getText())){
+                try {
+                    cantidad = Double.parseDouble(vista.campoTexto.getText());
+                    modelo.setCantidad(cantidad);
+                     modelo.setMoneda(1.00);
+                    modelo.convertirPesoARublo();
+                    vista.lResultado.setText(modelo.getResultado().toString());
+                } catch (NumberFormatException e) {
+                    vista.lResultado.setText("Introduzca una cantidad valida...");
+                }
+                
+            }
         }
     }
+    
 }
+

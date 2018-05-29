@@ -7,7 +7,7 @@ package MVC;
 
 /**
  *
- * @author Jhon
+ * @author Jhona
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,7 +38,8 @@ public class Controlador implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent evento) {
+    public void actionPerformed(ActionEvent evento) 
+    {
         if (vista.pesos == evento.getSource()) {
             if (!"".equals(vista.campoTexto.getText())) {
                 try {
@@ -51,9 +52,32 @@ public class Controlador implements ActionListener {
                     vista.lResultado.setText("Introduzca una cantidad valida...");
                 }
             }
-        } else if (vista.dolares == evento.getSource()) {
-            if (!"".equals(vista.campoTexto.getText())) {
-                try {
+        }else if (vista.dirhams == evento.getSource()) 
+        {
+            System.out.println("dir");
+            if (!"".equals(vista.campoTexto.getText())) 
+            {
+                try 
+                {
+                    cantidad = Double.parseDouble(vista.campoTexto.getText());
+                    modelo.setCantidad(cantidad);
+                    modelo.setMoneda(3.67250);
+                    
+                     modelo.convertirDirhamsADolar();
+                    
+                    vista.lResultado.setText(modelo.getResultado().toString());
+                } catch (NumberFormatException e) 
+                {
+                    vista.lResultado.setText("Introduzca una cantidad valida...");
+                }
+            }
+        }
+        else if (vista.dolares == evento.getSource()) 
+        {
+            if (!"".equals(vista.campoTexto.getText())) 
+            {
+                try
+                {
                     cantidad = Double.parseDouble(vista.campoTexto.getText());
                     modelo.setCantidad(cantidad);
                     modelo.setMoneda(3.3800);
@@ -90,6 +114,7 @@ public class Controlador implements ActionListener {
                 
             }
         }
+       
     }
     
 }

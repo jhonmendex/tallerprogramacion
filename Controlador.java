@@ -7,7 +7,7 @@ package MVC;
 
 /**
  *
- * @author Jhon
+ * @author Jhona
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

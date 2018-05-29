@@ -34,4 +34,7 @@ public class Modelo {
     public void convertirPesoADolar() {
         resultado = cantidad / moneda;
     }
+     public void convertirDirhamsADolar() {
+        resultado = cantidad * moneda;
+    }
 }

@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 
 public class Vista extends JFrame {
 
-    public JButton pesos, dolares;
+    public JButton pesos, dolares,yen_peso,peso_yen;
     private JPanel panelB, panelR;
     public JLabel lResultado;
     public JTextField campoTexto;
@@ -36,12 +36,16 @@ public class Vista extends JFrame {
 
         pesos = new JButton("Convertir a Pesos");
         dolares = new JButton("Convertir a Dolares");
+        yen_peso = new JButton("Convertir a Yenes a Pesos");
+        peso_yen = new JButton("Convertir a Yenes a Pesos");
 
         lResultado = new JLabel("Resultado:");
         campoTexto = new JTextField(20);
 
         panelB.add(pesos);
         panelB.add(dolares);
+        panelB.add(yen_peso);
+        panelB.add(peso_yen);
 
         panelR.add(lResultado);
 

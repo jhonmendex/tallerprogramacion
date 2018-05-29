@@ -12,9 +12,13 @@ package MVC;
 public class Modelo {
 
     private Double moneda;
+    private float valor;
     private Double cantidad;
     private Double resultado;
 
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
     public void setMoneda(Double moneda) {
         this.moneda = moneda;
     }
@@ -34,4 +38,9 @@ public class Modelo {
     public void convertirPesoADolar() {
         resultado = cantidad / moneda;
     }
+
+    public void convetirYenAPeso() {
+        resultado = cantidad * valor;
+    }
+
 }

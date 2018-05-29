@@ -23,9 +23,11 @@ public class Controlador implements ActionListener {
     public Controlador(Modelo modelo, Vista vista) {
         this.modelo = modelo;
         this.vista = vista;
-
+        this.vista.yen_peso.addActionListener(this);
         this.vista.pesos.addActionListener(this);
         this.vista.dolares.addActionListener(this);
+        this.vista.peso_yen.addActionListener(this);
+
     }
 
     public void iniciarVista() {
@@ -57,6 +59,30 @@ public class Controlador implements ActionListener {
                     modelo.setCantidad(cantidad);
                     modelo.setMoneda(3.3800);
                     modelo.convertirPesoADolar();
+                    vista.lResultado.setText(modelo.getResultado().toString());
+                } catch (NumberFormatException e) {
+                    vista.lResultado.setText("Introduzca una cantidad valida...");
+                }
+            }
+        } else if (vista.yen_peso == evento.getSource()) {
+            if (!"".equals(vista.campoTexto.getText())) {
+                try {
+                    cantidad = Double.parseDouble(vista.campoTexto.getText());
+                    modelo.setCantidad(cantidad);
+                    modelo.setValor(26.798f);
+                    modelo.convetirYenAPeso();
+                    vista.lResultado.setText(modelo.getResultado().toString());
+                } catch (NumberFormatException e) {
+                    vista.lResultado.setText("Introduzca una cantidad valida...");
+                }
+            }
+        }else if (vista.peso_yen == evento.getSource()) {
+            if (!"".equals(vista.campoTexto.getText())) {
+                try {
+                    cantidad = Double.parseDouble(vista.campoTexto.getText());
+                    modelo.setCantidad(cantidad);
+                    modelo.setValor(26.798f);
+                    modelo.convertirPesoAYen();
                     vista.lResultado.setText(modelo.getResultado().toString());
                 } catch (NumberFormatException e) {
                     vista.lResultado.setText("Introduzca una cantidad valida...");

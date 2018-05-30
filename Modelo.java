@@ -38,12 +38,15 @@ public class Modelo {
     public void convertirPesoADolar() {
         resultado = cantidad / moneda;
     }
+<<<<<<< HEAD
 
     public void convetirYenAPeso() {
         resultado = cantidad * valor;
     }
 
 
+=======
+>>>>>>> 7ce7a23ffb54adf4eb8e3d7e27863732cc5fb467
      public void convertirDirhamsADolar() {
         resultado = cantidad * moneda;
     }

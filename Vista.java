@@ -21,8 +21,12 @@ import javax.swing.JTextField;
 
 public class Vista extends JFrame {
 
+<<<<<<< HEAD
     //public JButton pesos, dolares,yen_peso,peso_yen;
     public JButton pesos, dolares, dirhams, yen_peso, peso_yen;
+=======
+    public JButton pesos, dolares,dirhams;
+>>>>>>> 7ce7a23ffb54adf4eb8e3d7e27863732cc5fb467
     private JPanel panelB, panelR;
     public JLabel lResultado;
     public JTextField campoTexto;
@@ -44,11 +48,18 @@ public class Vista extends JFrame {
 
         lResultado = new JLabel("Resultado:");
         campoTexto = new JTextField(20);
+<<<<<<< HEAD
         panelB.add(dirhams);
         panelB.add(pesos);
         panelB.add(dolares);
         panelB.add(yen_peso);
         panelB.add(peso_yen);
+=======
+           panelB.add(dirhams);
+        panelB.add(pesos);
+        panelB.add(dolares);
+        
+>>>>>>> 7ce7a23ffb54adf4eb8e3d7e27863732cc5fb467
 
         panelR.add(lResultado);
 

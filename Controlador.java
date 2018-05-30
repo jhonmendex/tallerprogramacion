@@ -27,7 +27,7 @@ public class Controlador implements ActionListener {
         this.vista.pesos.addActionListener(this);
         this.vista.dolares.addActionListener(this);
         this.vista.peso_yen.addActionListener(this);
-
+        this.vista.dirhams.addActionListener(this);
     }
 
     public void iniciarVista() {

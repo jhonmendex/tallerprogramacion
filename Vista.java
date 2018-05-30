@@ -5,7 +5,8 @@
  */
 package MVC;
 
-/**jjhbjhjhbjhbjhbjhbbj
+/**
+ * jjhbjhjhbjhbjhbjhbbj
  *
  * @author Jhon
  */
@@ -21,7 +22,7 @@ import javax.swing.JTextField;
 public class Vista extends JFrame {
 
     //public JButton pesos, dolares,yen_peso,peso_yen;
-    public JButton pesos, dolares,dirhams,yen_peso,peso_yen;
+    public JButton pesos, dolares, dirhams, yen_peso, peso_yen;
     private JPanel panelB, panelR;
     public JLabel lResultado;
     public JTextField campoTexto;
@@ -43,12 +44,11 @@ public class Vista extends JFrame {
 
         lResultado = new JLabel("Resultado:");
         campoTexto = new JTextField(20);
-           panelB.add(dirhams);
+        panelB.add(dirhams);
         panelB.add(pesos);
         panelB.add(dolares);
         panelB.add(yen_peso);
         panelB.add(peso_yen);
-        
 
         panelR.add(lResultado);
 
